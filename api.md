@@ -5,10 +5,10 @@ Cette documentation présente les différentes routes API disponibles pour votre
 
 ## Table des matières
 
--   [Authentification](https://claude.ai/chat/eb1bf6fd-c99f-4aa7-a702-d617130d912e#authentification)
--   [Notes](https://claude.ai/chat/eb1bf6fd-c99f-4aa7-a702-d617130d912e#notes)
--   [Tâches](https://claude.ai/chat/eb1bf6fd-c99f-4aa7-a702-d617130d912e#t%C3%A2ches)
--   [Catégories](https://claude.ai/chat/eb1bf6fd-c99f-4aa7-a702-d617130d912e#cat%C3%A9gories)
+-   [Authentification](#authentification)
+-   [Notes](#notes)
+-   [Tâches](#t%C3%A2ches)
+-   [Catégories](#cat%C3%A9gories)
 
 ## Authentification
 
