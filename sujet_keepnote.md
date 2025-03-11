@@ -68,7 +68,7 @@ L'application sera développée avec Expo et React Native, et communiquera avec 
 app/
 ├── (tabs)/
 │   ├── index.tsx        # Écran principal des notes
-│   ├── explore.tsx      # Écran principal des tâches
+│   ├── tasks.tsx        # Écran principal des tâches
 │   ├── settings.tsx     # Écran des paramètres (déconnexion, switch thème)
 │   └── _layout.tsx      # Layout des onglets
 ├── tasks/
