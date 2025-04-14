@@ -6,6 +6,8 @@ Ce projet consiste à développer une application mobile moderne de prise de not
 
 L'application sera développée avec Expo et React Native, et communiquera avec une API REST backend déjà mise en place.
 
+**Date de rendu : 29 avril 2025**
+
 ## Objectifs pédagogiques
 
 - Développer une application React Native complète avec Expo
@@ -120,20 +122,65 @@ Le backend permet de consulter le nombre de requêtes effectuées par votre appl
 - La documentation complète de l'API est fournie séparément
 - Vous pouvez visualiser vos données (notes, tâches, catégories) et le nombre de requêtes API via l'interface admin après création de compte : https://keep.kevindupas.com/admin
 
-## Évaluation
+## Sécurité de l'application
 
-Votre projet sera évalué sur :
-- L'organisation du projet
-- L'implémentation correcte de toutes les fonctionnalités requises
-- L'optimisation des requêtes API (respect du seuil de 10 000 requêtes)
-- L'expérience utilisateur
-- La gestion optimale du stockage local et de la synchronisation
-- La robustesse (gestion des erreurs, etc..)
+La sécurité est un aspect primordial dans le développement de cette application. Vous devez impérativement :
+
+- Utiliser **Expo SecureStore** pour stocker les données sensibles (tokens d'authentification, etc.)
+- Implémenter des mécanismes de chiffrement avec **expo-crypto** lorsque nécessaire
+- Vérifier que toutes les communications avec l'API sont sécurisées (HTTPS)
+- Valider toutes les entrées utilisateur pour prévenir les injections
+- Gérer correctement les erreurs sans exposer d'informations sensibles
+- Protéger contre les attaques courantes (XSS, CSRF, etc.)
+
+## Tests
+
+Vous devez mettre en place au minimum 3 tests unitaires pour votre application en utilisant Jest. Ces tests doivent être pertinents et couvrir des fonctionnalités critiques de votre application. Voici des exemples de fonctionnalités à tester :
+
+- La validation des formulaires
+- Le traitement des données
+- Les fonctions de sécurité
+- Les composants d'interface utilisateur
+
+La couverture de test n'est pas exigée à 100%, mais les tests doivent vérifier le bon fonctionnement des éléments essentiels de l'application.
+
+## Barème d'évaluation (20 points)
+
+### Fonctionnalités (10 points)
+- Authentification (2 points)
+  - Connexion fonctionnelle (1 point)
+  - Stockage sécurisé du token (1 point)
+- Gestion des notes (3 points)
+  - Affichage, création, modification, suppression (1,5 points)
+  - Catégorisation et recherche (1,5 points)
+- Gestion des tâches (3 points)
+  - Affichage, création, modification, suppression (1,5 points)
+  - Sous-tâches et marquage (1,5 points)
+- Gestion des catégories (1 point)
+- Interface utilisateur (1 point)
+  - Mode sombre/clair (0,5 point)
+  - Indicateurs de chargement et gestion des erreurs (0,5 point)
+
+### Architecture et qualité du code (4 points)
+- Organisation du projet selon la structure recommandée (1 point)
+- Bonnes pratiques React Native et Expo (1 point)
+- Gestion propre des états et utilisation correcte des hooks (1 point)
+- Lisibilité et maintenabilité du code (1 point)
+
+### Optimisation des requêtes API (2 points)
+- Respect de la limite de 10 000 requêtes (critère éliminatoire : -2 points si dépassé)
+- Mise en place de stratégies efficaces (2 points)
+
+### Sécurité (2 points)
+- Utilisation correcte d'Expo SecureStore (0,75 point)
+- Implémentation de mécanismes de chiffrement (0,75 point)
+- Validation des entrées et protection contre les attaques (0,5 point)
+
+### Tests (2 points)
+- Implémentation d'au moins 3 tests unitaires pertinents avec Jest (2 points)
 
 ## Contraintes techniques
 
-- Utiliser React Native avec Expo
-- Utiliser Expo Router pour la navigation
 - Implémenter une stratégie efficace de mise en cache et de stockage local
 - Effectuer moins de 10 000 requêtes API au total
 
